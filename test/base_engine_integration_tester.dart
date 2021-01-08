@@ -1,7 +1,6 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:json_dao/json_dao_engine.dart';
-import 'package:json_dao/reactive/reactive_dao_engine.dart';
 import 'package:meta/meta.dart';
 
 @isTestGroup
