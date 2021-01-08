@@ -14,7 +14,7 @@ String testPath(String relativePath) {
   final String path =
       current.path.endsWith('/test') ? current.path : '${current.path}/test';
 
-  return '$path/dao/$relativePath';
+  return '$path/$relativePath';
 }
 
 final _testBoxesPath = testPath('hive_test_boxes');
