@@ -28,10 +28,6 @@ void main() {
     Hive.init(_testBoxesPath);
   });
 
-  tearDownAll(() async {
-    Directory(_testBoxesPath).deleteSync(recursive: true);
-  });
-
   engineIntegrationTest(
     createEngine: () => HiveDaoEngine('TestBox'),
     tearDownTests: () => Hive.deleteBoxFromDisk('TestBox'),
