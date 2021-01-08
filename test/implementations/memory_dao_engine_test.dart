@@ -1,6 +1,7 @@
-import 'package:json_dao/memory_dao_engine.dart';
+import 'package:json_dao/implementations/memory_dao_engine.dart';
 
-import 'base_engine_integration_tester.dart';
+import '../base_engine_integration_tester.dart';
+import '../reactive/reactive_engine_tester.dart';
 
 void main() {
   engineIntegrationTest(

@@ -1,11 +1,12 @@
 import 'package:flutter_test/flutter_test.dart';
+import 'package:json_dao/reactive/reactive_dao_engine.dart';
 import 'package:mockito/mockito.dart';
 import 'package:json_dao/dao.dart';
 import 'package:json_dao/dto.dart';
 import 'package:json_dao/mapper.dart';
-import 'package:json_dao/reactive_dao.dart';
+import 'package:json_dao/reactive/reactive_dao.dart';
 
-import 'mocks.dart';
+import '../mocks.dart';
 
 class MockReactiveDaoEngine = MockDaoEngine with ReactiveDaoEngine;
 

@@ -2,9 +2,10 @@ import 'dart:io';
 
 import 'package:flutter_test/flutter_test.dart';
 import 'package:hive/hive.dart';
-import 'package:json_dao/hive_dao_engine.dart';
+import 'package:json_dao/implementations/hive_dao_engine.dart';
 
-import 'base_engine_integration_tester.dart';
+import '../base_engine_integration_tester.dart';
+import '../reactive/reactive_engine_tester.dart';
 
 // From: https://github.com/terryx/flutter-muscle/blob/master/github_provider/test/utils/test_path.dart
 String testPath(String relativePath) {

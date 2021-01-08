@@ -1,9 +1,9 @@
+import 'package:json_dao/reactive/reactive_dao_engine.dart';
 import 'package:meta/meta.dart';
 import 'package:hive/hive.dart';
 import 'package:rxdart/rxdart.dart';
 import 'package:uuid/uuid.dart';
 import 'package:json_dao/json_dao_engine.dart';
-import 'package:json_dao/reactive_dao.dart';
 
 class HiveDaoEngine implements JsonDaoEngine {
   final HiveInterface _hive;

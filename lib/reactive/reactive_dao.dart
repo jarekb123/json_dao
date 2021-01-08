@@ -1,7 +1,7 @@
 import 'package:json_dao/dao.dart';
-import 'package:json_dao/json_dao_engine.dart';
+import 'package:json_dao/dto.dart';
 
-import 'dto.dart';
+import 'reactive_dao_engine.dart';
 
 mixin ReactiveCrudJsonDao<Model> on CrudJsonDao<Model> {
   @override
@@ -18,10 +18,4 @@ mixin ReactiveCrudJsonDao<Model> on CrudJsonDao<Model> {
 
   Stream<Model> observeObject(String id) =>
       engine.observeObject(id).map(mapper.fromMap);
-}
-
-mixin ReactiveDaoEngine on JsonDaoEngine {
-  Stream<Map<String, Map<String, dynamic>>> observeAll();
-
-  Stream<Map<String, dynamic>> observeObject(String id);
 }
