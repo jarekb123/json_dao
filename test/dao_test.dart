@@ -1,10 +1,10 @@
-import 'package:flutter_test/flutter_test.dart';
 import 'package:mockito/mockito.dart';
 
 import 'package:json_dao/dao.dart';
 import 'package:json_dao/dto.dart';
 import 'package:json_dao/json_dao_engine.dart';
 import 'package:json_dao/mapper.dart';
+import 'package:test/test.dart';
 
 import 'mocks.dart';
 

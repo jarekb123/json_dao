@@ -1,9 +1,9 @@
 import 'dart:async';
 
-import 'package:flutter_test/flutter_test.dart';
 import 'package:hive/hive.dart';
 import 'package:mockito/mockito.dart';
 import 'package:rxdart/rxdart.dart';
+import 'package:test/test.dart';
 import 'package:uuid/uuid.dart';
 import 'package:json_dao/implementations/hive_dao_engine.dart';
 

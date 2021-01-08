@@ -1,8 +1,8 @@
 import 'dart:io';
 
-import 'package:flutter_test/flutter_test.dart';
 import 'package:hive/hive.dart';
 import 'package:json_dao/implementations/hive_dao_engine.dart';
+import 'package:test/test.dart';
 
 import '../base_engine_integration_tester.dart';
 import '../reactive/reactive_engine_tester.dart';
@@ -29,7 +29,7 @@ void main() {
   });
 
   tearDownAll(() async {
-    Directory(_testBoxesPath).deleteSync();
+    Directory(_testBoxesPath).deleteSync(recursive: true);
   });
 
   engineIntegrationTest(
