@@ -1,5 +1,9 @@
 # json_dao
 
+![example workflow name](https://github.com/jarekb123/json_dao/workflows/Tests/badge.svg)
+
+
+
 A Dart's DAO abstraction that can be used with many db engines that enables storing data as JSON/Map structure.
 
 ## CrudJsonDao abstraction
