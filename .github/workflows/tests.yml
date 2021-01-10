@@ -35,6 +35,7 @@ jobs:
         - run: dart analyze
         - uses: nick-invision/retry@v2.4.0
           with:
+            timeout_minutes: 5
             max_attempts: 2
             retry_on: error
             command: dart test
