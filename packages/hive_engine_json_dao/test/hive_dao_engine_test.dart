@@ -5,7 +5,7 @@ import 'package:mockito/mockito.dart';
 import 'package:rxdart/rxdart.dart';
 import 'package:test/test.dart';
 import 'package:uuid/uuid.dart';
-import 'package:json_dao/implementations/hive_dao_engine.dart';
+import 'package:hive_engine_json_dao/hive_dao_engine.dart';
 
 class _MockHiveBox extends Mock implements Box<Map<String, dynamic>> {}
 
