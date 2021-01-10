@@ -24,6 +24,8 @@ void main() {
     final testBoxesDir = Directory(_testBoxesPath);
     if (testBoxesDir.existsSync()) {
       testBoxesDir.deleteSync(recursive: true);
+    } else {
+      testBoxesDir.create(recursive: true);
     }
     Hive.init(_testBoxesPath);
   });
