@@ -1,19 +1,20 @@
-name: json_dao
-description: A new Flutter package project.
+name: json_dao_test
+description: JSON Dao Engine testing helper
 version: 0.0.1
 author: null
 homepage: null
+
+publish_to: none
 
 environment:
   sdk: ">=2.7.0 <3.0.0"
 
 dependencies:
-  hive: ^1.4.4+1
+  json_dao:
+    path: ../json_dao/
+  test: ^1.15.7
   meta: ^1.2.4
-  rxdart: ^0.25.0
-  uuid: ^2.2.2
 
 dev_dependencies:
-  test: ^1.15.7
   mockito: ^4.1.3
 
