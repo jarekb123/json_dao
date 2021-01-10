@@ -16,6 +16,17 @@ jobs:
       steps:
         - uses: cedx/setup-dart@v2
         - uses: actions/checkout@v2
+        - run: cd json_dao
+        - run: dart pub get
+        - run: dart analyze
+        - run: dart test
+  
+  hive_engine_tests:
+      runs-on: ubuntu-latest
+      steps:
+        - uses: cedx/setup-dart@v2
+        - uses: actions/checkout@v2
+        - run: cd hive_engine_json_dao
         - run: dart pub get
         - run: dart analyze
         - run: dart test
