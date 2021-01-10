@@ -20,14 +20,18 @@ String testPath(String relativePath) {
 final _testBoxesPath = testPath('hive_test_boxes');
 
 void main() {
-  setUpAll(() {
+  setUpAll(() async {
     final testBoxesDir = Directory(_testBoxesPath);
-    if (testBoxesDir.existsSync()) {
-      testBoxesDir.deleteSync(recursive: true);
+    if (await testBoxesDir.exists()) {
+      await testBoxesDir.delete(recursive: true);
     } else {
-      testBoxesDir.create(recursive: true);
+      await testBoxesDir.create(recursive: true);
     }
     Hive.init(_testBoxesPath);
+  });
+
+  tearDownAll(() async {
+    await Hive.deleteFromDisk();
   });
 
   engineIntegrationTest(
