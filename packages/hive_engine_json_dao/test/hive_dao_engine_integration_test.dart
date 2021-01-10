@@ -25,6 +25,7 @@ void main() {
   tearDownAll(() async {});
 
   engineIntegrationTest(
+    'HiveDaoEngine tests',
     createEngine: () {
       Hive.init(_testBoxesPath);
       return HiveDaoEngine('TestBox');
@@ -32,7 +33,6 @@ void main() {
     tearDownTests: () {
       Hive.deleteBoxFromDisk('TestBox');
     },
-    description: 'HiveDaoEngine tests',
   );
 
   reactiveEngineIntegrationTest(
