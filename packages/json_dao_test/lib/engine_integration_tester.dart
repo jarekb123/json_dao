@@ -3,11 +3,11 @@ import 'package:meta/meta.dart';
 import 'package:test/test.dart';
 
 @isTestGroup
-void engineIntegrationTest({
+void engineIntegrationTest(
+  Object description, {
   @required JsonDaoEngine Function() createEngine,
   void Function() setUpTests,
   void Function() tearDownTests,
-  Object description,
 }) {
   group(
     description ?? 'DaoEngine',

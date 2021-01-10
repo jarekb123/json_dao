@@ -4,8 +4,8 @@ import 'package:json_dao_test/reactive_engine_integration_tester.dart';
 
 void main() {
   engineIntegrationTest(
+    'MemoryDaoEngine tests',
     createEngine: () => MemoryDaoEngine(),
-    description: 'MemoryDaoEngine tests',
   );
 
   reactiveEngineIntegrationTest(
