@@ -16,7 +16,7 @@ jobs:
       steps:
         - uses: cedx/setup-dart@v2
         - uses: actions/checkout@v2
-        - run: cd $GITHUB_WORKSPACE/json_dao
+        - run: cd packages/json_dao
         - run: dart pub get
         - run: dart analyze
         - run: dart test
@@ -26,7 +26,7 @@ jobs:
       steps:
         - uses: cedx/setup-dart@v2
         - uses: actions/checkout@v2
-        - run: cd $GITHUB_WORKSPACE/hive_engine_json_dao
+        - run: cd packages/hive_engine_json_dao
         - run: dart pub get
         - run: dart analyze
         - run: dart test
