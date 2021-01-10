@@ -20,13 +20,7 @@ String testPath(String relativePath) {
 final _testBoxesPath = testPath('hive_test_boxes');
 
 void main() {
-  setUpAll(() async {
-    final testBoxesDir = Directory(_testBoxesPath);
-    if (await testBoxesDir.exists()) {
-      await testBoxesDir.delete(recursive: true);
-    } else {
-      await testBoxesDir.create(recursive: true);
-    }
+  setUpAll(() {
     Hive.init(_testBoxesPath);
   });
 
