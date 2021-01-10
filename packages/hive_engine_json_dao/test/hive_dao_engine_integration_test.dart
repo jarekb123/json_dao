@@ -20,23 +20,27 @@ String testPath(String relativePath) {
 final _testBoxesPath = testPath('hive_test_boxes');
 
 void main() {
-  setUpAll(() {
-    Hive.init(_testBoxesPath);
-  });
+  setUpAll(() {});
 
-  tearDownAll(() async {
-    await Hive.deleteFromDisk();
-  });
+  tearDownAll(() async {});
 
   engineIntegrationTest(
-    createEngine: () => HiveDaoEngine('TestBox'),
-    tearDownTests: () => Hive.deleteBoxFromDisk('TestBox'),
+    createEngine: () {
+      Hive.init(_testBoxesPath);
+      return HiveDaoEngine('TestBox');
+    },
+    tearDownTests: () {
+      Hive.deleteBoxFromDisk('TestBox');
+    },
     description: 'HiveDaoEngine tests',
   );
 
   reactiveEngineIntegrationTest(
     'ReactiveHiveDaoEngine tests',
-    create: () => ReactiveHiveDaoEngine('ReactiveTestBox'),
+    create: () {
+      Hive.init(_testBoxesPath);
+      return ReactiveHiveDaoEngine('ReactiveTestBox');
+    },
     tearDownTests: () => Hive.deleteBoxFromDisk('ReactiveTestBox'),
   );
 }
