@@ -21,13 +21,11 @@ final _testBoxesPath = testPath('hive_test_boxes');
 
 void main() {
   setUpAll(() {
-    final testBoxesDir = Directory(_testBoxesPath);
-    if (testBoxesDir.existsSync()) {
-      testBoxesDir.deleteSync(recursive: true);
-    } else {
-      testBoxesDir.create(recursive: true);
-    }
     Hive.init(_testBoxesPath);
+  });
+
+  tearDownAll(() async {
+    await Hive.deleteFromDisk();
   });
 
   engineIntegrationTest(
