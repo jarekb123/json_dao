@@ -1,0 +1,25 @@
+name: hive_engine_json_dao
+description: Hive implementation of JSON Dao Engine (json_dao package)
+version: 0.0.1
+author: null
+homepage: null
+
+publish_to: none
+
+environment:
+  sdk: ">=2.7.0 <3.0.0"
+
+dependencies:
+  hive: ^1.4.4+1
+  meta: ^1.2.4
+  rxdart: ^0.25.0
+  uuid: ^2.2.2
+  json_dao:
+    path: ../json_dao/
+
+dev_dependencies:
+  test: ^1.15.7
+  mockito: ^4.1.3
+  json_dao_test:
+    path: ../json_dao_test/
+
