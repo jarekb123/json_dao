@@ -25,8 +25,8 @@ void main() {
     'ReactiveHiveDaoEngine tests',
     create: () {
       Hive.init('./hive_test_boxes');
-      return ReactiveHiveDaoEngine('ReactiveTestBox');
+      return ReactiveHiveDaoEngine('Reactive');
     },
-    tearDownTests: () => Hive.deleteBoxFromDisk('ReactiveTestBox'),
+    tearDownTests: () => Hive.deleteBoxFromDisk('Reactive'),
   );
 }
